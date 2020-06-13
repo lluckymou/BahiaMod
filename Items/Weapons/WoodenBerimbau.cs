@@ -9,7 +9,7 @@ namespace BahiaMod.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			Tooltip.SetDefault("Classic Berimbau similar to those from Salvador, Bahia.");
+			Tooltip.SetDefault("Classic Berimbau similar to those from Salvador, Bahia");
 		}
 
 		public override void SetDefaults() 

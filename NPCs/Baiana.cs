@@ -219,9 +219,6 @@ namespace BahiaMod.NPCs
 						if (NPC.downedMechBossAny) // Quest requirements
 						{
 							Main.LocalPlayer.inventory[
-								Main.LocalPlayer.FindItem(ItemType<Items.Weapons.Atabaque>())
-							].TurnToAir();
-							Main.LocalPlayer.inventory[
 								Main.LocalPlayer.FindItem(ItemType<Items.Accessories.PurpleCord>())
 							].TurnToAir();
 							Main.PlaySound(SoundID.Item105);

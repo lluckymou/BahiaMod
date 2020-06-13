@@ -10,7 +10,7 @@ namespace BahiaMod.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Master's Berimbau");
-			Tooltip.SetDefault("A traditional Berimbau, but only for the most experienced.");
+			Tooltip.SetDefault("A traditional Berimbau, but only for the most experienced");
 		}
 
 		public override void SetDefaults() 
