@@ -32,7 +32,7 @@ namespace BahiaMod.Items.Consumable
             if (Main.raining) BahiaMod.StopRain();
             else BahiaMod.StartRain();
 
-            Main.NewText("Oshumare listened to your prayers", 50, 255, 130);
+            Main.NewText("Oshunmare listened to your prayers", 50, 255, 130);
             return true;
         }
 
