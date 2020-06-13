@@ -5,7 +5,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace BahiaMod.Items.Consumable
 {
-    public class OblationForOshumare : ModItem
+    public class OblationForOshunmare : ModItem
     {
         public override void SetStaticDefaults()
         {
