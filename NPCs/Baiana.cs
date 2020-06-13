@@ -319,6 +319,8 @@ namespace BahiaMod.NPCs
 				shop.item[nextSlot].SetDefaults(ItemType<Pandeiro>());
 				nextSlot++;
 			}
+			shop.item[nextSlot].SetDefaults(ItemID.CookedShrimp);
+			nextSlot++;
 			if (!Main.dayTime)
 			{
 				shop.item[nextSlot].SetDefaults(ItemID.SpecularFish);
