@@ -10,7 +10,7 @@ namespace BahiaMod.Items.Consumable
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Oblation For Oxumaré");
-            Tooltip.SetDefault("Sends prayers directly to Oshumare\nManipulates rain");
+            Tooltip.SetDefault("Sends prayers directly to Oshunmare\nManipulates rain");
         }
 
         public override void SetDefaults()
