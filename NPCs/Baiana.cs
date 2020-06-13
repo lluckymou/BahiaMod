@@ -302,7 +302,7 @@ namespace BahiaMod.NPCs
 				shop.item[nextSlot].SetDefaults(ItemID.MoonglowSeeds);
 				nextSlot++;
 			}
-			if (NPC.downedFrost)
+			if (NPC.downedGolemBoss)
 			{
 				shop.item[nextSlot].SetDefaults(ItemID.ShiverthornSeeds);
 				nextSlot++;
