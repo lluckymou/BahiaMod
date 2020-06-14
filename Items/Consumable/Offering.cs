@@ -26,7 +26,7 @@ namespace BahiaMod.Items.Consumable
         }
         public override bool UseItem(Player player)
         {
-            NPC.NewNPC((int)(Main.LocalPlayer.position.X) + 16*20, (int)(Main.LocalPlayer.position.Y) + 16*30, mod.NPCType("AngrySpirit"));
+            NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("AngrySpirit"));
             Main.LocalPlayer.AddBuff(BuffID.Slow, 1800);
             Main.LocalPlayer.AddBuff(BuffID.Stinky, 1800);
             return true;
