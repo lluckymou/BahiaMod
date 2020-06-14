@@ -1,3 +1,4 @@
 displayName = Bahia Mod
 author = Lluckymou
-version = 1.0
+homepage = https://github.com/lluckymou/BahiaMod/wiki
+version = 1.0.1
