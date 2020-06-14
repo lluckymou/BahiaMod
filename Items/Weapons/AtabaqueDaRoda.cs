@@ -17,8 +17,9 @@ namespace BahiaMod.Items.Weapons
 		{
 			item.summon = true;
 			item.damage = 20;
-			item.width = 18;
-			item.height = 29;
+			item.width = 36;
+			item.height = 54;
+			item.scale = 0.5f;
 			item.useTime = 15;
 			item.useAnimation = 15;
 			item.useStyle = ItemUseStyleID.HoldingOut;

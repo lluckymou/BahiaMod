@@ -17,11 +17,12 @@ namespace BahiaMod.Items.Weapons
 		{
 			item.summon = true;
 			item.damage = 20;
-			item.width = 71;
-			item.height = 52;
+			item.width = 80;
+			item.height = 80;
+			item.scale = 0.6f;
 			item.useTime = 45;
 			item.useAnimation = 45;
-			item.useStyle = ItemUseStyleID.EatingUsing;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 7;
 			item.value = Item.sellPrice(0, 0, 26, 0);
 			item.shoot = mod.ProjectileType("BahiaNote");

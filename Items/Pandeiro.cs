@@ -15,9 +15,10 @@ namespace BahiaMod.Items
 
 		public override void SetDefaults() 
 		{
-			item.width = 23;
-			item.height = 12;
+			item.width = 46;
+			item.height = 22;
 			item.useTime = 25;
+			item.scale = 0.5f;
 			item.useAnimation = 25;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 0;
