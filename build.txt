@@ -1,4 +1,4 @@
 displayName = BahiaMod
 author = Lluckymou
 homepage = https://github.com/lluckymou/BahiaMod/wiki
-version = 1.0.4.1
+version = 1.0.4.2
