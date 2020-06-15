@@ -17,19 +17,25 @@ namespace BahiaMod.Items
 		{
 			item.width = 46;
 			item.height = 22;
-			item.useTime = 25;
+			item.useTime = 15;
 			item.scale = 0.5f;
-			item.useAnimation = 25;
+			item.useAnimation = 10;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 0;
 			item.value = Item.buyPrice(0,0,50,0);
 			item.rare = ItemRarityID.Blue;
-			if (!Main.dedServ) item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/PandeiroKick").WithPitchVariance(.2f);
 			item.autoReuse = true;
 		}
 		public override bool UseItem(Player player)
 		{
-			if (!Main.dedServ) item.UseSound = Main.rand.NextBool() ? mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/PandeiroKick").WithPitchVariance(.2f) : mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/PandeiroSnare").WithPitchVariance(.2f);
+			if (!Main.dedServ)
+			{
+				float cursorPosFromPlayer = (player.Distance(Main.MouseWorld) / ((Main.screenHeight / 2) / 24));
+				if (cursorPosFromPlayer > 24) cursorPosFromPlayer = 1;
+				else cursorPosFromPlayer = (cursorPosFromPlayer / 12) - 1;
+				if (cursorPosFromPlayer < 0) Main.PlaySound(SoundID.Item, (int)player.Center.X, (int)player.Center.Y, mod.GetSoundSlot(SoundType.Item, "Sounds/Item/PandeiroKick"), 1, -cursorPosFromPlayer);
+				else Main.PlaySound(SoundID.Item, (int)player.Center.X, (int)player.Center.Y, mod.GetSoundSlot(SoundType.Item, "Sounds/Item/PandeiroSnare"), 1, cursorPosFromPlayer);
+			}
 			return true;
 		}
 	}

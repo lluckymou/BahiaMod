@@ -27,12 +27,18 @@ namespace BahiaMod.Items.Weapons
 			item.shoot = mod.ProjectileType("BahiaNote");
 			item.shootSpeed = 4f;
 			item.rare = ItemRarityID.Orange;
-			if (!Main.dedServ) item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/AtabaqueKick").WithPitchVariance(.2f);
 			item.autoReuse = true;
 		}
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			if (!Main.dedServ) item.UseSound = Main.rand.NextBool() ? mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/AtabaqueKick").WithPitchVariance(.2f) : mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/AtabaqueSnare").WithPitchVariance(.2f);
+			if (!Main.dedServ)
+			{
+				float cursorPosFromPlayer = (player.Distance(Main.MouseWorld) / ((Main.screenHeight / 2) / 24));
+				if (cursorPosFromPlayer > 24) cursorPosFromPlayer = 1;
+				else cursorPosFromPlayer = (cursorPosFromPlayer / 12) - 1;
+				if (cursorPosFromPlayer < 0) Main.PlaySound(SoundID.Item, (int)player.Center.X, (int)player.Center.Y, mod.GetSoundSlot(SoundType.Item, "Sounds/Item/AtabaqueKick"), 1, -cursorPosFromPlayer);
+				else Main.PlaySound(SoundID.Item, (int)player.Center.X, (int)player.Center.Y, mod.GetSoundSlot(SoundType.Item, "Sounds/Item/AtabaqueSnare"), 1, cursorPosFromPlayer);
+			}
 			return true;
 		}
 	}

@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 using static Terraria.ModLoader.ModContent;
 
 namespace BahiaMod.Items.Weapons
@@ -27,8 +28,19 @@ namespace BahiaMod.Items.Weapons
 			item.shoot = mod.ProjectileType("BahiaNote");
 			item.shootSpeed = 2.5f;
 			item.rare = ItemRarityID.Green;
-			if (!Main.dedServ) item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/Berimbau").WithPitchVariance(.2f);
 			item.autoReuse = false;
+		}
+		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		{
+			if (!Main.dedServ)
+			{
+				float cursorPosFromPlayer = (player.Distance(Main.MouseWorld) / ((Main.screenHeight / 2) / 24));
+				if (cursorPosFromPlayer > 18) cursorPosFromPlayer = 0.45f;
+				else cursorPosFromPlayer = (cursorPosFromPlayer / 12) - 1;
+				if (cursorPosFromPlayer < -0.5) cursorPosFromPlayer = -0.5f;
+				Main.PlaySound(SoundID.Item, (int)player.Center.X, (int)player.Center.Y, mod.GetSoundSlot(SoundType.Item, "Sounds/Item/Berimbau"), 1, cursorPosFromPlayer);
+			}
+			return true;
 		}
 	}
 }
