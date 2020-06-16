@@ -1,4 +1,4 @@
-displayName = BahiaMod (playable instruments!)
+displayName = BahiaMod
 author = Lluckymou
 homepage = https://github.com/lluckymou/BahiaMod/wiki
-version = 1.0.5
+version = 1.0.6

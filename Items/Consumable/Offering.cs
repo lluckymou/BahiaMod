@@ -21,7 +21,7 @@ namespace BahiaMod.Items.Consumable
             item.value = 6000;
             item.rare = ItemRarityID.Blue;
             item.useStyle = ItemUseStyleID.EatingUsing;
-            item.UseSound = SoundID.Item2;
+            item.UseSound = SoundID.NPCDeath6;
             item.consumable = true;
         }
         public override bool UseItem(Player player)

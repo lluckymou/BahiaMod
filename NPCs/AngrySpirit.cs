@@ -17,12 +17,12 @@ namespace BahiaMod.NPCs
 		{
 			npc.width = 24;
 			npc.height = 44;
-			npc.damage = 15;
-			npc.defense = 5;
-			npc.lifeMax = 90;
+			npc.damage = 30;
+			npc.defense = 16;
+			npc.lifeMax = 120;
 			npc.HitSound = SoundID.NPCHit7;
 			npc.DeathSound = SoundID.NPCDeath6;
-			npc.value = 500f;
+			npc.value = 420f;
 			npc.noGravity = true;
 			npc.noTileCollide = true;
 			npc.alpha = 100;

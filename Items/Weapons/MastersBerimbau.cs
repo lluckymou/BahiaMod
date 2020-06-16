@@ -35,9 +35,9 @@ namespace BahiaMod.Items.Weapons
 			if (!Main.dedServ)
 			{
 				float cursorPosFromPlayer = (player.Distance(Main.MouseWorld) / ((Main.screenHeight / 2) / 24));
-				if (cursorPosFromPlayer > 18) cursorPosFromPlayer = 0.45f;
+				if (cursorPosFromPlayer > 18) cursorPosFromPlayer = 0.35f;
 				else cursorPosFromPlayer = (cursorPosFromPlayer / 12) - 1;
-				if (cursorPosFromPlayer < -0.5) cursorPosFromPlayer = -0.5f;
+				if (cursorPosFromPlayer < -0.3) cursorPosFromPlayer = -0.3f;
 				Main.PlaySound(SoundID.Item, (int)player.Center.X, (int)player.Center.Y, mod.GetSoundSlot(SoundType.Item, "Sounds/Item/Berimbau"), 1, cursorPosFromPlayer);
 			}
 			return true;

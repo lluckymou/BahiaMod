@@ -44,7 +44,7 @@ namespace BahiaMod.Items.Consumable
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.FallenStar, 2);
-            recipe.AddIngredient(ItemType<OtherworldlyEssence>());
+            recipe.AddIngredient(ItemType<OtherworldlyEssence>(), 2);
             recipe.AddIngredient(ItemType<Offering>());
             recipe.AddTile(mod.TileType("EshuCarpet"));
             recipe.SetResult(this);
